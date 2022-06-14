@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <div class="header">
+    <img src="./images/logo.svg" alt="">
+  </div>
+
+  <main>
+    <div class="header_image">
+      <img src="./images/hero-mobile.jpg" alt="" width= 100% class="img_mobile">
+      <img src="./images/hero-desktop.jpg" alt="" width= 100% class="img_desktop">
+    </div>
+
+    <div class="main_content">
+      <div class="header2">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <p class="text">
+        <span class="thin block">We're</span> <span class="block">coming</span> <span class="block">soon</span>
+      </p>
+    
+      <p class="text2">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+    
+      <div class="click" id="click">
+        <form action="">
+          <input type="email" placeholder="Email Address" id="myEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+          <button><img src="./images/icon-arrow.svg" alt=""></button>
+        </form>
+      </div>
+      <p class="onshow" id="show">Please provide a valid email</p>
+
+    </div>
+  </main>
+  
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">LI Mnguni</a>.
+    </p>
+  </footer>
+
+  <script>
+    var button = document.querySelector("button");
+    
+    button.addEventListener("click", function() {
+    var x = document.getElementById("myEmail").pattern;
+    var y = document.getElementById("myEmail").value;
+    var z = document.getElementById("show");
+    var click = document.getElementById("click");
+    
+    // For Chrome Browser
+    var y2 = document.getElementById("myEmail");
+
+    
+    if (y.length > 0) {
+      if (y !== x) {
+        z.style.display = "block";
+        click.classList.add("show2");
+
+        // For Chrome Browser, ...
+        y2.style.border = "2px solid red";
+        y2.style.borderRadius = "100px";
+      } 
+    } 
+
+  })
+    
+  </script>
+</body>
+</html>
